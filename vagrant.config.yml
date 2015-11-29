@@ -1,0 +1,17 @@
+---
+# Vagrant config.
+vagrant_ip: 192.168.61.61
+vagrant_memory: 1024
+vagrant_cpus: 2
+
+# Drupal settings.
+drupal_domain: "local.drupal.org.au"
+drupal_core_path: "/drupal"
+
+# Apache config.
+apache_vhosts:
+  - {servername: "{{ drupal_domain }}", documentroot: "{{ drupal_core_path }}"}
+
+# Drush config.
+drush_version: "8.0.0-rc4"
+drush_keep_updated: yes
